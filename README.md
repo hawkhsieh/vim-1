@@ -2,10 +2,12 @@
 
 1. 
 
-    cd ~
-    git clone https://github.com/jex-lin/vim.git
-    ln -s vim .vim
-    ln -s vim/vimrc .vimrc
+{% codeblock %}
+cd ~
+git clone https://github.com/jex-lin/vim.git
+ln -s vim .vim
+ln -s vim/vimrc .vimrc
+{% endcodeblock %}
 
 2. execute `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 
