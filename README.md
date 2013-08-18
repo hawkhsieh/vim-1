@@ -2,10 +2,10 @@
 
 1. Follow below steps :
 
-** cd ~
-** git clone https://github.com/jex-lin/vim.git
-** ln -s vim .vim
-** ln -s vim/vimrc .vimrc
+`cd ~`   
+`git clone https://github.com/jex-lin/vim.git`   
+`ln -s vim .vim`   
+`ln -s vim/vimrc .vimrc`    
 
 2. execute `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 
