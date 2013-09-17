@@ -1,3 +1,4 @@
+# if
 snippet if
 	if (${1:/* condition */})
 	{
@@ -11,20 +12,31 @@ snippet /*
 	* ${1:nonation}
 	*/
 
-# test output
+# Debug
+### echo 
 snippet qq
 	echo 'qq';
 snippet cc
 	echo 'cc';
 snippet dd
 	echo 'dd';
+snippet tt
+	echo 'tt';
 snippet var
 	var_dump(${1:variable})${2}
 snippet br
 	'<br />'
-
-# debug 
-snippet log
-    log_message('info', ${1:/* message  */});${2}
 snippet pre
-	echo '<pre>';print_r(${1:/* Array */});${2}
+	echo '<pre>';print_r(${1:/* Variable */});${2}
+-------------------------------
+### log_message
+snippet log
+	log_message('info', ${1:/* Log message  */});${2}
+snippet logqq
+	log_message('info', 'qq');
+snippet logcc
+	log_message('info', 'cc');
+snippet logdd
+	log_message('info', 'dd');
+snippet logtt
+	log_message('info', 'tt');
