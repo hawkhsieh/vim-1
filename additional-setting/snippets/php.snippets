@@ -23,7 +23,8 @@ snippet var
 snippet br
 	'<br />'
 
-# log
+# debug 
 snippet log
-    log_message('info', ${1:/* message  */});
-	${2}
+    log_message('info', ${1:/* message  */});${2}
+snippet pre
+	echo '<pre>';print_r(${1:/* Array */});${2}
