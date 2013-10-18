@@ -25,6 +25,12 @@ see `:h` vundle vimdoc for more details
 
 You can set your own snippets setting in `.vim/additional-setting/snippets/`, and added into `setup.sh`.
 
+## example
+
+##### tabular
+
+After selecting in visual mode, type `:Tab/=` can align `=` in each line.
+
 ## Plugins:
 
 * [vundle](https://github.com/gmarik/vundle)   
