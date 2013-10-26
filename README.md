@@ -17,6 +17,10 @@
     git clone https://github.com/jex-lin/vim.git   
     bash vim/setup.sh
 
+## Update
+
+    bash vim/update.sh
+
 ## Docs
 
 see `:h` vundle vimdoc for more details
