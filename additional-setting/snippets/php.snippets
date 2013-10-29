@@ -33,7 +33,7 @@ snippet pre
 snippet log
 	log_message('info', ${1:/* Log message  */});${2}
 snippet logjson
-	log_message('info', json_encode(${1:/* variable */}));${2}
+	log_message('info', json_encode(${1:/* variable */}, JSON_UNESCAPED_UNICODE));${2}
 snippet logqq
 	log_message('info', 'qq');
 snippet logcc
