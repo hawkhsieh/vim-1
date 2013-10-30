@@ -1,15 +1,15 @@
 # if
 snippet if
-	if (${1:/* condition */})
+	if (${1:(condition)})
 	{
-		${2:// code...}
+		${2:(code...)}
 	}
 	${3}
 
 # nonation
 snippet /*
 	/*
-	* ${1:nonation}
+	* ${1:(nonation)}
 	*/
 
 # Debug
@@ -23,17 +23,19 @@ snippet dd
 snippet tt
 	echo 'tt';
 snippet var
-	var_dump(${1:variable});${2}
+	var_dump(${1:(variable)});${2}
 snippet br
 	'<br />'
-snippet pre
-	echo '<pre>';print_r(${1:/* Variable */});echo '<pre>';${2}
+snippet pr
+	echo '<pre>';print_r(${1:(array)});echo '<pre>';${2}
 -------------------------------
 ### log_message
 snippet log
-	log_message('info', ${1:/* Log message  */});${2}
+	log_message('info', ${1:(log message)});${2}
 snippet logjson
-	log_message('info', json_encode(${1:/* variable */}, JSON_UNESCAPED_UNICODE));${2}
+	log_message('info', json_encode(${1:(array)}, JSON_UNESCAPED_UNICODE));${2}
+snippet logpr
+	log_message('info', print_r(${1:(array)});${2}
 snippet logqq
 	log_message('info', 'qq');
 snippet logcc
