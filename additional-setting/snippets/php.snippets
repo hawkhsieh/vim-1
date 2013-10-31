@@ -34,8 +34,10 @@ snippet log
 	log_message('info', ${1: ... });${2}
 snippet logjson
 	log_message('info', json_encode(${1: ... }, JSON_UNESCAPED_UNICODE));${2}
+snippet logvar
+	log_message('info', var_export(${1: ... }, TRUE));${2}
 snippet logpr
-	log_message('info', print_r(${1: ... });${2}
+	log_message('info', print_r(${1: ... }));${2}
 snippet logqq
 	log_message('info', 'qq');
 snippet logcc
