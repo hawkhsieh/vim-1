@@ -32,6 +32,8 @@ snippet pr
 ### log_message
 snippet log
 	log_message('info', ${1: ... });${2}
+snippet log-
+	log_message('info', '-----------------------------');${1}
 snippet logjson
 	log_message('info', json_encode(${1: ... }, JSON_UNESCAPED_UNICODE));${2}
 snippet logvar
