@@ -89,10 +89,10 @@ highlight StatusLine term=bold,reverse cterm=bold,reverse
 
 
 " Extend boundary of split window
-noremap <A-h> <C-w><
-noremap <A-j> <C-w>-
-noremap <A-k> <C-w>+
-noremap <A-l> <C-w>>
+noremap <S-h> <C-w><
+noremap <S-j> <C-w>-
+noremap <S-k> <C-w>+
+noremap <S-l> <C-w>>
 
 
 
