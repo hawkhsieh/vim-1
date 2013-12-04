@@ -94,5 +94,5 @@ noremap <S-j> <C-w>-
 noremap <S-k> <C-w>+
 noremap <S-l> <C-w>>
 
-
-
+" Execute compass. (.bashrc has to set PATH="XXX")
+autocmd BufWritePost *.scss !compass_lite <afile> <afile>:r.css
