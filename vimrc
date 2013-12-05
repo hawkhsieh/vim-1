@@ -1,7 +1,10 @@
 " Jex Lin's vim setting 
 " =====================
 " create time : 20130818 20:30
-" last modified time : 20130818 20:30
+" last modified time : 20131225 10:02
+" =====================================
+" help : 
+" `:help key-notation`
 " =====================================
 
 " [vim plugin] vundle
@@ -89,10 +92,10 @@ highlight StatusLine term=bold,reverse cterm=bold,reverse
 
 
 " Extend boundary of split window
-noremap <S-h> <C-w><
-noremap <S-j> <C-w>-
-noremap <S-k> <C-w>+
-noremap <S-l> <C-w>>
+noremap <C-h> <C-w>< <C-w>< <C-w><
+noremap <C-j> <C-w>- <C-w>- <C-w>-
+noremap <C-k> <C-w>+ <C-w>+ <C-w>+
+noremap <C-l> <C-w>> <C-w>> <C-w>>
 
 " Execute compass. (.bashrc has to set PATH="XXX")
 autocmd BufWritePost *.scss !compass_lite <afile> <afile>:r.css
