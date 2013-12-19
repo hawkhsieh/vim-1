@@ -28,6 +28,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-fugitive'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'scrooloose/syntastic'
+Bundle 'jnwhiteh/vim-golang'
 
 " [vim plugin] Airline
 set laststatus=2
@@ -52,6 +53,13 @@ filetype plugin on
 " let g:vim_markdown_folding_disabled=1
 " Set Initial Foldlevel
 let g:vim_markdown_initial_foldlevel=1
+
+" [vim plugin] vim-golang : go syntax
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 " =========================================
 
