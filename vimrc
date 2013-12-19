@@ -49,10 +49,10 @@ let g:EasyMotion_leader_key = '<Leader>'
 filetype plugin on
 
 " [vim plugin] vim-markdown : Markdown syntax
-" Disable Folding
-" let g:vim_markdown_folding_disabled=1
-" Set Initial Foldlevel
-let g:vim_markdown_initial_foldlevel=1
+" Disable Folding (This function could show whole file content)
+let g:vim_markdown_folding_disabled=1
+" Set Initial Foldlevel  (if enable, it  would be like this '+---  3 lines: bash ~/vim/update.sh------'
+" let g:vim_markdown_initial_foldlevel=1
 
 " [vim plugin] vim-golang : go syntax
 filetype off
