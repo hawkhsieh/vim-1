@@ -23,6 +23,8 @@
 
 ## Docs
 
+Install & Update : `:BundleInstall`
+
 see `:h` vundle vimdoc for more details
 
 ## Snippets
@@ -48,3 +50,5 @@ After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 * [vim-airline](https://github.com/bling/vim-airline)   
 * [tabular](https://github.com/godlygeek/tabular)   
 * [fugitive](https://github.com/tpope/vim-fugitive)   
+* [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
+* [syntastic](https://github.com/scrooloose/syntastic.git)
