@@ -18,16 +18,17 @@ Bundle 'gmarik/vundle'
 " My Bundles here :
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
-Bundle 'c9s/colorselector.vim'
+" Bundle 'c9s/colorselector.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'sjl/gundo.vim'
-Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'sjl/gundo.vim'
+" Bundle 'Lokaltog/vim-easymotion'
 Bundle 'bling/vim-airline'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-fugitive'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'scrooloose/syntastic'
+Bundle 'jnwhiteh/vim-golang'
 
 " [vim plugin] Airline
 set laststatus=2
@@ -39,10 +40,10 @@ let g:airline_fugitive_prefix = ' '
 nnoremap <silent> <F1> :NERDTree<CR>
 
 " [vim plugin] Gundo 
-nnoremap <F2> :GundoToggle<CR>
+" nnoremap <F2> :GundoToggle<CR>
 
 " [vim plugin] easy motion
-let g:EasyMotion_leader_key = '<Leader>'
+" let g:EasyMotion_leader_key = '<Leader>'
 
 " [vim plugin] snipMate
 filetype plugin on
@@ -54,11 +55,11 @@ let g:vim_markdown_folding_disabled=1
 " let g:vim_markdown_initial_foldlevel=1
 
 " [vim plugin] vim-golang : go syntax
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
+" filetype off
+" filetype plugin indent off
+" set runtimepath+=$GOROOT/misc/vim
+" filetype plugin indent on
+" syntax on
 
 " =========================================
 
