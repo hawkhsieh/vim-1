@@ -28,7 +28,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-fugitive'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'scrooloose/syntastic'
-Bundle 'jnwhiteh/vim-golang'
 
 " [vim plugin] Airline
 set laststatus=2
