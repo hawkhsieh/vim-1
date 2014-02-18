@@ -72,7 +72,7 @@ nnoremap <silent> <F3> :TlistToggle<CR>
 " 1. will reuse the current window
 " g:godef_split=0
 " 2. will open the definition in a new tab
-g:godef_split=2
+" g:godef_split=2
 " 3. If you want jumps to the same file to move your current cursor instead of splitting
 " g:godef_same_file_in_same_window=1
 
