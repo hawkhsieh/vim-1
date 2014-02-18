@@ -70,6 +70,11 @@ Shortcut :
 
     go get github.com/jstemmer/gotags
 
+shortcut :
+
+`F4` : show func/variable name in new windows
+`p` :  go to your target func name
+
 
 ## example
 
