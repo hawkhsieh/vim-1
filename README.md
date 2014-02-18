@@ -42,6 +42,11 @@ Additional install ctags, [Download ctags source](http://ctags.sourceforge.net/)
     $ ./configure
     $ make && sudo make install
 
+vimrc :
+
+   Bundle 'vim-scripts/taglist.vim'
+   nnoremap <silent> <F4> :TlistToggle<CR>
+
 Usage :
 
     ctags -R     (genrate index file)

@@ -65,7 +65,7 @@ let g:vim_markdown_folding_disabled=1
 " syntax on
 
 " taglist
-nnoremap <silent> <F3> :TlistToggle<CR>
+nnoremap <silent> <F4> :TlistToggle<CR>
 
 " godef
 " 1. will reuse the current window
@@ -77,7 +77,7 @@ nnoremap <silent> <F3> :TlistToggle<CR>
 
 " tagbar
 
-nmap <F4> :TagbarToggle<CR>
+nmap <F3> :TagbarToggle<CR>
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [
