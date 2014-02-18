@@ -49,8 +49,8 @@ Usage :
 
 Shortcut :
 
-`ctrl` + `]` : Go to the funtion (Can corss directory/file)
-`ctrl` + `t` : Go back origin position
+1.  `ctrl` + `]` : Go to the funtion (Can corss directory/file)
+2. `ctrl` + `t` : Go back origin position
 
 ### Godef (For go to jump to another position of func)
 
@@ -77,6 +77,11 @@ if fail, update gocode :
     cd $GOPATH/src/github.com/nsf/gocode
     ./vim/update.sh
 
+options :
+
+    gocode set propose-builtins true    (auto tip golang func/type, I think it didn't work)
+    gocode set lib-path "/home/border/gocode/pkg/linux_amd64"       (default: gocode search `$GOPATH/pkg/$GOOS_$GOARCH` and `$GOROOT/pkg/$GOOS_$GOARCH`)
+
 ### Tagbar (Show func/variable name of current file)
 
     Bundle 'majutsushi/tagbar'
@@ -85,8 +90,8 @@ if fail, update gocode :
 
 shortcut :
 
-`F4` : show func/variable name in new windows
-`p` :  go to your target func name but only current file
+1. `F4` : show func/variable name in new windows
+2. `p` :  go to your target func name but only current file
 
 ## Usage
 
@@ -96,15 +101,15 @@ After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 
 #### vim-easymotion
 
-`\w` or `\W` : Looking forward
-`\b` or `\B` : Looking backward
+1. `\w` or `\W` : Looking forward
+2. `\b` or `\B` : Looking backward
 
 #### ctrlp
 
-`ctrl` + `p` : start choosing
-`ctrl` + `t` : new tab
-`ctrl` + `v` : vertical
-`ctrl` + `o` : show options
+1. `ctrl` + `p` : start choosing
+2. `ctrl` + `t` : new tab
+3. `ctrl` + `v` : vertical
+4. `ctrl` + `o` : show options
 
 #### fugitive
 
