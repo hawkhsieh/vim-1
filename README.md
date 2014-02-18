@@ -72,6 +72,11 @@ shortcut :
 
 `ctrl` + `x` and `ctrl` + `o` : Tip func name of package
 
+if fail, update gocode :
+
+    cd $GOPATH/src/github.com/nsf/gocode
+    ./vim/update.sh
+
 ### Tagbar (Show func/variable name of current file)
 
     Bundle 'majutsushi/tagbar'
