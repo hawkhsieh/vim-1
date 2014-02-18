@@ -52,7 +52,7 @@ Shortcut :
 `ctrl` + `]` : Go to the funtion (Can corss directory/file)
 `ctrl` + `t` : Go back origin position
 
-### Godef (Jump to another position of func)
+### Godef (For go to jump to another position of func)
 
     Bundle 'dgryski/vim-godef'
 
