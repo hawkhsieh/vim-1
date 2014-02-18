@@ -42,12 +42,36 @@ Additional install ctags, [下載 ctags](http://ctags.sourceforge.net/)
     $ ./configure
     $ make && sudo make install
 
+### Godef (Jump to another position of func)
+
+    Bundle 'dgryski/vim-godef'
+
+    go get code.google.com/p/rog-go/exp/cmd/godef
+
+### Gocode (Tip func name that you type in half)
+
+    Bundle 'Blackrush/vim-gocode'
+
+    go get github.com/nsf/gocode
+
+### Tagbar (Show func/variable name of current file)
+
+    Bundle 'majutsushi/tagbar'
+
+    go get github.com/jstemmer/gotags
+
+
 
 ## example
 
-##### tabular
+#### tabular
 
 After selecting in visual mode, type `:Tab/=` can align `=` in each line.
+
+#### gocode
+
+`ctrl` + `x` : Tip func name under package
+`ctrl` + `o`
 
 ## Plugins:
 
@@ -65,4 +89,5 @@ After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 * Markdown syntax highlighting[vim-markdown](https://github.com/plasticboy/vim-markdown.git)
 * Other syntax highlighting[syntastic](https://github.com/scrooloose/syntastic.git)
 * Go syntax highlighting[vim-golang](https://github.com/jnwhiteh/vim-golang.git)
-
+* Jump to another func[dgryski/vim-godef]
+* Gocode (Tip func name that you type in half)[Blackrush/vim-gocode]

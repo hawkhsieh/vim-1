@@ -30,6 +30,9 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'scrooloose/syntastic'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'dgryski/vim-godef'
+Bundle 'Blackrush/vim-gocode'
+Bundle 'majutsushi/tagbar'
 
 " [vim plugin] Airline
 set laststatus=2
@@ -64,6 +67,37 @@ let g:vim_markdown_folding_disabled=1
 
 " taglist
 nnoremap <silent> <F3> :TlistToggle<CR>
+
+" tagbar
+
+nmap <F4> :TagbarToggle<CR>
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
 
 " =========================================
 
