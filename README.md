@@ -35,13 +35,22 @@ You can set your own snippets setting in `.vim/additional-setting/snippets/`, an
 
 ### taglist
 
-Additional install ctags, [下載 ctags](http://ctags.sourceforge.net/)
+Additional install ctags, [Download ctags source](http://ctags.sourceforge.net/)
 
     $ tar xvf ctags-5.6.tar.gz
     $ cd ctags-5.6
     $ ./configure
     $ make && sudo make install
 
+Usage :
+
+    ctags -R     (genrate index file)
+    vim XX.php
+
+Shortcut :
+
+`ctrl` + `]` : Go to the funtion (Can corss directory/file)
+`ctrl` + `t` : Go back origin position
 
 ## example
 
