@@ -168,5 +168,23 @@ noremap <C-j> <C-w>- <C-w>- <C-w>-
 noremap <C-k> <C-w>+ <C-w>+ <C-w>+
 noremap <C-l> <C-w>> <C-w>> <C-w>>
 
+" Switch `:set paste`  open/close
+set pastetoggle=<F5>
+
+
+nnoremap <silent> <F6> :call MouseCopyToggle()<CR>
+let g:CopyFlag=1
+function! MouseCopyToggle()
+    if g:CopyFlag == 1
+        set wrap
+        set nonu
+        let g:CopyFlag=0
+    else
+        set nowrap
+        set nu
+        let g:CopyFlag=1
+    endif
+endfunction
+
 " Execute compass. (.bashrc has to set PATH="XXX")
 autocmd BufWritePost *.scss !compass_lite <afile> <afile>:r.css
