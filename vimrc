@@ -18,7 +18,6 @@ Bundle 'gmarik/vundle'
 " My Bundles here :
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
-" Bundle 'c9s/colorselector.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'sjl/gundo.vim'
@@ -47,7 +46,7 @@ nnoremap <silent> <F1> :NERDTree<CR>
 nnoremap <F2> :GundoToggle<CR>
 
 " [vim plugin] easy motion
-" let g:EasyMotion_leader_key = '<Leader>'
+let g:EasyMotion_leader_key = '<Leader>'
 
 " [vim plugin] snipMate
 filetype plugin on
