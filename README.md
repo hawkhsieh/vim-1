@@ -88,18 +88,33 @@ shortcut :
 `F4` : show func/variable name in new windows
 `p` :  go to your target func name but only current file
 
-## example
+## Usage
 
 #### tabular
 
 After selecting in visual mode, type `:Tab/=` can align `=` in each line.
+
+#### vim-easymotion
+
+`\w` or `\W` : Looking forward
+`\b` or `\B` : Looking backward
+
+#### ctrlp
+
+`ctrl` + `p` : start choosing
+`ctrl` + `t` : new tab
+`ctrl` + `v` : vertical
+`ctrl` + `o` : show options
+
+#### fugitive
+
+`:Gblame` : Equal to command `git blame xx.go`
 
 ## Plugins:
 
 * [vundle](https://github.com/gmarik/vundle)
 * [nerdtree](https://github.com/scrooloose/nerdtree)
 * [ctrlp.vim](https://github.com/kien/ctrlp.vim)
-* [colorselector.vim](https://github.com/c9s/colorselector.vim)
 * [snipmate.vim](https://github.com/msanders/snipmate.vim)
 * [vim-surround](https://github.com/tpope/vim-surround)
 * [gundo.vim](https://github.com/sjl/gundo.vim)
