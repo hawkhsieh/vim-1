@@ -109,6 +109,9 @@ let g:tagbar_type_go = {
 
 " =========================================
 
+" When saving *.go format file
+autocmd BufWritePre *.go :Fmt
+
 " Set Tabs and spacing
 set expandtab       "convert tab to space
 set shiftwidth=4    "indent : let 1 tab to 4 spaces

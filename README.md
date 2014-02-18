@@ -58,11 +58,19 @@ Shortcut :
 
     go get code.google.com/p/rog-go/exp/cmd/godef
 
+shortcut :
+
+`gd` : Jump to func (cross directory/file)
+
 ### Gocode (Tip func name that you type in half)
 
     Bundle 'Blackrush/vim-gocode'
 
     go get github.com/nsf/gocode
+
+shortcut :
+
+`ctrl` + `x` and `ctrl` + `o` : Tip func name of package
 
 ### Tagbar (Show func/variable name of current file)
 
@@ -73,19 +81,13 @@ Shortcut :
 shortcut :
 
 `F4` : show func/variable name in new windows
-`p` :  go to your target func name
-
+`p` :  go to your target func name but only current file
 
 ## example
 
 #### tabular
 
 After selecting in visual mode, type `:Tab/=` can align `=` in each line.
-
-#### gocode
-
-`ctrl` + `x` : Tip func name under package
-`ctrl` + `o`
 
 ## Plugins:
 
