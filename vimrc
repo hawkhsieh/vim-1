@@ -1,15 +1,15 @@
-" Jex Lin's vim setting 
+" Jex Lin's vim setting
 " =====================
 " create time : 20130818 20:30
 " last modified time : 20131225 10:02
 " =====================================
-" help : 
+" help :
 " `:help key-notation`
 " =====================================
 
 " [vim plugin] vundle
-set nocompatible	" be iMproved
-filetype off		" required!
+set nocompatible    " be iMproved
+filetype off        " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " required! let Vundle manage Vundle
@@ -40,7 +40,7 @@ let g:airline_fugitive_prefix = ' '
 " [vim plugin] NERDTree
 nnoremap <silent> <F1> :NERDTree<CR>
 
-" [vim plugin] Gundo 
+" [vim plugin] Gundo
 nnoremap <F2> :GundoToggle<CR>
 
 " [vim plugin] easy motion
@@ -68,20 +68,20 @@ nnoremap <silent> <F3> :TlistToggle<CR>
 " =========================================
 
 " Set Tabs and spacing
-set expandtab		"convert tab to space
-set shiftwidth=4	"indent : let 1 tab to 4 spaces
-set tabstop=4		"width of Tab, defaout is 8
-set softtabstop=4	"let 1 tab to 4 spaces
+set expandtab       "convert tab to space
+set shiftwidth=4    "indent : let 1 tab to 4 spaces
+set tabstop=4       "width of Tab, defaout is 8
+set softtabstop=4   "let 1 tab to 4 spaces
 
-set hlsearch		"highlight matched word
-set incsearch		"cursor will shift to the matched word
+set hlsearch        "highlight matched word
+set incsearch       "cursor will shift to the matched word
 
-set history=50		"number of histroy of colon command use in vim
-set cindent		    "Auto-indent
-set backspace=2		"fix delete bug in insert mode
-set nomodeline		"I don't want to overwrite my vim configuration by notation of file
+set history=50      "number of histroy of colon command use in vim
+set cindent         "Auto-indent
+set backspace=2     "fix delete bug in insert mode
+set nomodeline      "I don't want to overwrite my vim configuration by notation of file
 set nowrap
-set number		    "display number in head of line
+set number          "display number in head of line
 set nofoldenable
 
 " Always use utf-8 encoding.
