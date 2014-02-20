@@ -112,7 +112,7 @@ let g:tagbar_type_go = {
 autocmd BufWritePre *.go :Fmt
 
 " Searching ignorecase
-set noignorecase
+set ignorecase
 
 " Set Tabs and spacing
 set expandtab       "convert tab to space
