@@ -191,3 +191,12 @@ endfunction
 
 " Execute compass. (.bashrc has to set PATH="XXX")
 autocmd BufWritePost *.scss !compass_lite <afile> <afile>:r.css
+
+" function! FixCSS()
+"     let pos = line( "." )
+"     silent :%s/{/{\r    /g
+"     silent :%s/;\s*\n*\s*/;\r    /g
+"     silent :%s/\s*}/}\r/g
+"     exe pos
+" endfunction
+" command! Fixcss call FixCSS()
