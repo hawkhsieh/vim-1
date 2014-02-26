@@ -4,31 +4,31 @@ set -e
 
 echo "=== Start ==="
 
-cd ~
+cd $HOME
 
 # Check .vim and .vimrc
 echo "=== Check .vim and .vimrc ==="
 if [ -d ".vim" ]; then
-    echo 
+    echo
     echo " ***Caution : ~/.vim exist ! Please backup and rename to another one."
-    echo 
+    echo
     exit
 fi
 if [ -f ".vimrc" ]; then
-    echo 
+    echo
     echo " ***Caution : ~/.vimrc exist ! Please backup and rename to another one."
-    echo 
+    echo
     exit
 fi
 
-# Create symbolic link 
+# Create symbolic link
 echo "=== Create symbolic link ==="
 ln -s vim .vim
 ln -s vim/vimrc .vimrc
 
 # Download vundle and other plugins
 echo "=== Download vundle and other plugins ==="
-git clone https://github.com/gmarik/vundle.git ~/vim/bundle/vundle
+git clone https://github.com/gmarik/vundle.git $HOME/vim/bundle/vundle
 vim +BundleInstall +qall
 
 # Combine snippets
