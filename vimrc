@@ -51,10 +51,14 @@ let g:EasyMotion_leader_key = '<Leader>'
 " [vim plugin] snipMate
 filetype plugin on
 
+" [vim plugin] syntastic
+" > Just check php syntax error, don't check coding style
+let g:syntastic_php_checkers=['php']
+
 " [vim plugin] vim-markdown : Markdown syntax
-" Disable Folding (This function could show whole file content)
+" > Disable Folding (This function could show whole file content)
 let g:vim_markdown_folding_disabled=1
-" Set Initial Foldlevel  (if enable, it  would be like this '+---  3 lines: bash ~/vim/update.sh------'
+" > Set Initial Foldlevel  (if enable, it  would be like this '+---  3 lines: bash ~/vim/update.sh------'
 " let g:vim_markdown_initial_foldlevel=1
 
 " [vim plugin] vim-golang : go syntax
@@ -64,18 +68,18 @@ let g:vim_markdown_folding_disabled=1
 " filetype plugin indent on
 " syntax on
 
-" taglist
+" [vim plugin] taglist
 nnoremap <silent> <F4> :TlistToggle<CR>
 
-" godef
-" 1. will reuse the current window
+" [vim plugin] godef
+" > 1. will reuse the current window
 " g:godef_split=0
-" 2. will open the definition in a new tab
+" > 2. will open the definition in a new tab
 " g:godef_split=2
-" 3. If you want jumps to the same file to move your current cursor instead of splitting
+" > 3. If you want jumps to the same file to move your current cursor instead of splitting
 " g:godef_same_file_in_same_window=1
 
-" tagbar
+" [vim plugin] tagbar
 
 nmap <F3> :TagbarToggle<CR>
 let g:tagbar_type_go = {
@@ -106,7 +110,7 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-" =========================================
+" ======= Plugin Setting End ==================================
 
 " When saving *.go format file
 autocmd BufWritePre *.go :Fmt

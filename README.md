@@ -91,7 +91,7 @@ options :
 
     Bundle 'majutsushi/tagbar'
 
-    go get github.com/jstemmer/gotags
+    go get -u github.com/jstemmer/gotags
 
 shortcut :
 
