@@ -113,7 +113,7 @@ let g:tagbar_type_go = {
 " ======= Plugin Setting End ==================================
 
 " When saving *.go format file
-autocmd BufWritePre *.go :Fmt
+" autocmd BufWritePre *.go :Fmt
 
 " Searching ignorecase
 set ignorecase
