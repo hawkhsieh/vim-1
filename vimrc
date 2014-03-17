@@ -194,7 +194,7 @@ function! MouseCopyToggle()
 endfunction
 
 " Execute compass. (.bashrc has to set PATH="XXX")
-autocmd BufWritePost *.scss !compass_lite <afile> <afile>:r.css
+" autocmd BufWritePost *.scss !compass_lite <afile> <afile>:r.css
 
 " function! FixCSS()
 "     let pos = line( "." )
