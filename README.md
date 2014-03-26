@@ -57,6 +57,10 @@ Shortcut :
 1.  `ctrl` + `]` : Go to the funtion (Can corss directory/file)
 2. `ctrl` + `t` : Go back origin position
 
+### Install mercurial
+
+    sudo apt-get install mercurial
+
 ### Godef (For go to jump to another position of func)
 
     Bundle 'dgryski/vim-godef'
