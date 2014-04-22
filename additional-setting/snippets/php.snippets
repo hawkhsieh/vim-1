@@ -31,23 +31,23 @@ snippet gg
 snippet bb
 	echo 'bb';
 snippet var
-	var_dump(${1: ... });${2}
+	var_dump(${1});${2}
 snippet br
 	'<br />'
 snippet pr
-	echo '<pre>';print_r(${1: ... });echo '</pre>';${2}
+	echo '<pre>';print_r(${1});echo '</pre>';${2}
 # -------------------------------
 ### log_message
 snippet log
-	log_message('info', ${1: ... });${2}
+	log_message('info', ${1});${2}
 snippet log-
 	log_message('info', '-----------------------------');${1}
 snippet logjson
-	log_message('info', json_encode(${1: ... }, JSON_UNESCAPED_UNICODE));${2}
+	log_message('info', json_encode(${1}, JSON_UNESCAPED_UNICODE));${2}
 snippet logvar
-	log_message('info', var_export(${1: ... }, TRUE));${2}
+	log_message('info', var_export(${1}, TRUE));${2}
 snippet logpr
-	log_message('info', print_r(${1: ... }));${2}
+	log_message('info', print_r(${1}));${2}
 snippet logqq
 	log_message('info', 'qq');
 snippet logaa
