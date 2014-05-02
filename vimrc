@@ -125,8 +125,11 @@ set tabstop=4       "width of Tab, defaout is 8
 set softtabstop=4   "let 1 tab to 4 spaces
 
 set hlsearch        "highlight matched word
-set incsearch       "cursor will shift to the matched word
+" set incsearch       "cursor will shift to the matched word
+" set showmatch       " it can reduce the need for %, the cursor will briefly jump to the matching brace when you insert one.
 
+set colorcolumn=120 " Warning line for characters number.
+set cursorline      " cursor line
 set history=50      "number of histroy of colon command use in vim
 set cindent         "Auto-indent
 set backspace=2     "fix delete bug in insert mode
@@ -206,3 +209,29 @@ endfunction
 "     exe pos
 " endfunction
 " command! Fixcss call FixCSS()
+
+" Keyboard Number Area
+imap <Esc>Oq 1
+imap <Esc>Or 2
+imap <Esc>Os 3
+imap <Esc>Ot 4
+imap <Esc>Ou 5
+imap <Esc>Ov 6
+imap <Esc>Ow 7
+imap <Esc>Ox 8
+imap <Esc>Oy 9
+imap <Esc>Op 0
+imap <Esc>On .
+imap <Esc>OQ /
+imap <Esc>OR *
+imap <Esc>Ol +
+imap <Esc>OS -
+
+" Open file show last position
+if has("autocmd")
+autocmd BufRead *.txt set tw=78
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line ("'\"") <= line("$") |
+\ exe "normal g'\"" |
+\ endif
+endif
