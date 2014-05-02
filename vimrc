@@ -127,9 +127,10 @@ set softtabstop=4   "let 1 tab to 4 spaces
 set hlsearch        "highlight matched word
 " set incsearch       "cursor will shift to the matched word
 " set showmatch       " it can reduce the need for %, the cursor will briefly jump to the matching brace when you insert one.
-
-set colorcolumn=120 " Warning line for characters number.
+set colorcolumn=120 " Warning line for limiting 120 characters count.
 set cursorline      " cursor line
+hi CursorLine       ctermbg=236  ctermfg=NONE guibg=#303030 guifg=NONE    cterm=NONE           gui=NONE
+
 set history=50      "number of histroy of colon command use in vim
 set cindent         "Auto-indent
 set backspace=2     "fix delete bug in insert mode
