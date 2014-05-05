@@ -239,3 +239,9 @@ endif
 
 " Map the { and auto close the bracket.
 inoremap { {<CR>}<Esc>ko
+
+" Window horizontal move
+map <F7> zH
+imap <F7> <ESC>zHi
+map <F8> zL
+imap <F8> <ESC>zLi
