@@ -236,3 +236,6 @@ autocmd BufReadPost *
 \ exe "normal g'\"" |
 \ endif
 endif
+
+" Map the { and auto close the bracket.
+inoremap { {<CR>}<Esc>ko
