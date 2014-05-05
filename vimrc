@@ -240,8 +240,8 @@ endif
 " Map the { and auto close the bracket.
 inoremap { {<CR>}<Esc>ko
 
-" Window horizontal move
-map <F7> zH
-imap <F7> <ESC>zHi
-map <F8> zL
-imap <F8> <ESC>zLi
+" Window horizontal move (`zh` : left, `zl` : right)
+map <F7> 10zh
+imap <F7> <ESC>10zhi
+map <F8> 10zl
+imap <F8> <ESC>10zli
