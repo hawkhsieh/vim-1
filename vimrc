@@ -245,3 +245,9 @@ map <F7> 10zh
 imap <F7> <ESC>10zhi
 map <F8> 10zl
 imap <F8> <ESC>10zli
+
+" Map arrowkeys for switching windows
+nnoremap <Right>    <C-w>l
+nnoremap <Left>     <C-w>h
+nnoremap <Up>       <C-w>k
+nnoremap <Down>     <C-w>j
