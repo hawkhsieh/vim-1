@@ -238,7 +238,7 @@ autocmd BufReadPost *
 endif
 
 " Map the { and auto close the bracket.
-inoremap { {<CR>}<Esc>ko
+" inoremap { {<CR>}<Esc>ko
 
 " Window horizontal move (`zh` : left, `zl` : right)
 map <F7> 10zh
