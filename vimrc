@@ -251,3 +251,7 @@ nnoremap <Right>    <C-w>l
 nnoremap <Left>     <C-w>h
 nnoremap <Up>       <C-w>k
 nnoremap <Down>     <C-w>j
+
+" Change tabe conveniently
+map gl gt
+map gh gT
