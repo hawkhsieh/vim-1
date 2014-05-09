@@ -125,7 +125,7 @@ set tabstop=4       "width of Tab, defaout is 8
 set softtabstop=4   "let 1 tab to 4 spaces
 
 set hlsearch        "highlight matched word
-" set incsearch       "cursor will shift to the matched word
+set incsearch       "cursor will shift to the matched word
 " set showmatch       " it can reduce the need for %, the cursor will briefly jump to the matching brace when you insert one.
 set colorcolumn=120 " Warning line for limiting 120 characters count.
 set cursorline      " cursor line
