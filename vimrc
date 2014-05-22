@@ -28,7 +28,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'scrooloose/syntastic'
 Bundle 'jnwhiteh/vim-golang'
-Bundle 'vim-scripts/taglist.vim'
+" Bundle 'vim-scripts/taglist.vim'
 Bundle 'dgryski/vim-godef'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'majutsushi/tagbar'
@@ -69,7 +69,7 @@ let g:vim_markdown_folding_disabled=1
 " syntax on
 
 " [vim plugin] taglist
-nnoremap <silent> <F4> :TlistToggle<CR>
+" nnoremap <silent> <F4> :TlistToggle<CR>
 
 " [vim plugin] godef
 " > 1. will reuse the current window
