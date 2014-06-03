@@ -146,6 +146,7 @@ set encoding=utf8
 set tenc=utf8
 
 " Set tab settings.     change :tabe background color
+set tabpagemax=50    " default tab limit 10 pages
 highlight TabLine ctermbg=blue
 highlight TabLineFill ctermbg=green
 highlight TabLineSel ctermbg=red
@@ -249,12 +250,23 @@ imap <F7> <ESC>10zhi
 map <F8> 10zl
 imap <F8> <ESC>10zli
 
+" For Mapping Alt key
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+set timeout ttimeoutlen=50
+
 " Map arrowkeys for switching windows
-nnoremap <Right>    <C-w>l
-nnoremap <Left>     <C-w>h
-nnoremap <Up>       <C-w>k
-nnoremap <Down>     <C-w>j
+nnoremap <A-l>    <C-w>l
+nnoremap <A-h>    <C-w>h
+nnoremap <A-k>    <C-w>k
+nnoremap <A-j>    <C-w>j
+
 
 " Change tabe conveniently
 map gl gt
 map gh gT
+
