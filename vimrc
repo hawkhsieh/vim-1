@@ -175,10 +175,10 @@ autocmd! BufWritePost .vimrc source %
 
 
 " Extend boundary of split window
-noremap <C-h> <C-w>< <C-w>< <C-w><
-noremap <C-j> <C-w>- <C-w>- <C-w>-
-noremap <C-k> <C-w>+ <C-w>+ <C-w>+
-noremap <C-l> <C-w>> <C-w>> <C-w>>
+noremap <silent> <C-h> 3<C-w><
+noremap <silent> <C-j> 3<C-w>-
+noremap <silent> <C-k> 3<C-w>+
+noremap <silent> <C-l> 3<C-w>>
 
 " Switch `:set paste`  open/close
 set pastetoggle=<F5>
@@ -251,12 +251,9 @@ map <F8> 10zl
 imap <F8> <ESC>10zli
 
 " For Mapping Alt key
-let c='a'
-while c <= 'z'
-  exec "set <A-".c.">=\e".c
-  exec "imap \e".c." <A-".c.">"
-  let c = nr2char(1+char2nr(c))
-endw
+for i in range(65, 90) + range(97, 122)
+  exe "set <M-".nr2char(i).">=\<Esc>".nr2char(i)
+endfor
 set timeout ttimeoutlen=50
 
 " Map arrowkeys for switching windows
