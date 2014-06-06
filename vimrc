@@ -251,10 +251,10 @@ map <F8> 10zl
 imap <F8> <ESC>10zli
 
 " For Mapping Alt key
-for i in range(65, 90) + range(97, 122)
-  exe "set <M-".nr2char(i).">=\<Esc>".nr2char(i)
-endfor
-set timeout ttimeoutlen=50
+"for i in range(65, 90) + range(97, 122)
+"  exe "set <M-".nr2char(i).">=\<Esc>".nr2char(i)
+"endfor
+"set timeout ttimeoutlen=50
 
 " Map arrowkeys for switching windows
 nnoremap <A-l>    <C-w>l
