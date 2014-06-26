@@ -180,6 +180,12 @@ noremap <silent> <C-j> 3<C-w>-
 noremap <silent> <C-k> 3<C-w>+
 noremap <silent> <C-l> 3<C-w>>
 
+" Move split window
+noremap <silent> ah <C-w>h
+noremap <silent> aj <C-w>j
+noremap <silent> ak <C-w>k
+noremap <silent> al <C-w>l
+
 " Switch `:set paste`  open/close
 set pastetoggle=<F5>
 
