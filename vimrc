@@ -32,17 +32,6 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'dgryski/vim-godef'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'majutsushi/tagbar'
-" Vim scheme
-Bundle 'altercation/vim-colors-solarized.git'
-
-
-" [vim plugin] vim-colors-solarized.git
-syntax enable
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
-call togglebg#map("<F9>")
-
 
 " [vim plugin] Airline
 set laststatus=2
@@ -292,20 +281,30 @@ nnoremap td  :tabclose<CR>
 "nnoremap tl :tabprev<CR>
 "nnoremap tn :tabnew<CR>
 
+"-------------------------------------------
+" Vim scheme
+" Bundle 'altercation/vim-colors-solarized.git'
+" [vim plugin] vim-colors-solarized.git
+" syntax enable
+" set background=dark
+" colorscheme solarized
+" let g:solarized_termcolors=256
+" call togglebg#map("<F9>")
 "Remove background set by colorscheme
-hi Normal ctermbg=NONE
-hi Comment ctermbg=NONE
-hi Constant ctermbg=NONE
-hi Special ctermbg=NONE
-hi Identifier ctermbg=NONE
-hi Statement ctermbg=NONE
-hi PreProc ctermbg=NONE
-hi Type ctermbg=NONE
-hi Underlined ctermbg=NONE
-hi Todo ctermbg=NONE
-hi String ctermbg=NONE
-hi Function ctermbg=NONE
-hi Conditional ctermbg=NONE
-hi Repeat ctermbg=NONE
-hi Operator ctermbg=NONE
-hi Structure ctermbg=NONE
+" hi Normal ctermbg=NONE
+" hi Comment ctermbg=NONE
+" hi Constant ctermbg=NONE
+" hi Special ctermbg=NONE
+" hi Identifier ctermbg=NONE
+" hi Statement ctermbg=NONE
+" hi PreProc ctermbg=NONE
+" hi Type ctermbg=NONE
+" hi Underlined ctermbg=NONE
+" hi Todo ctermbg=NONE
+" hi String ctermbg=NONE
+" hi Function ctermbg=NONE
+" hi Conditional ctermbg=NONE
+" hi Repeat ctermbg=NONE
+" hi Operator ctermbg=NONE
+" hi Structure ctermbg=NONE
+"-------------------------------------------
