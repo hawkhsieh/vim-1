@@ -308,3 +308,11 @@ nnoremap td  :tabclose<CR>
 " hi Operator ctermbg=NONE
 " hi Structure ctermbg=NONE
 "-------------------------------------------
+
+" After searching highlight, type `,` + `n`(forward) or `N`(backward) can help you jump specific location.
+nnoremap <silent> <leader>N :hlsearch<CR>
+nnoremap <silent> <leader>n :nohlsearch<CR>
+let mapleader = ","
+
+" Map `esc` to clear highlight from searching result.
+nnoremap <silent> <Esc> :noh<CR>
