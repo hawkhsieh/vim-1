@@ -315,4 +315,5 @@ nnoremap <silent> <leader>n :nohlsearch<CR>
 let mapleader = ","
 
 " Map `esc` to clear highlight from searching result.
-nnoremap <silent> <Esc> :noh<CR>
+" Some problem with f1~f12
+" nnoremap <silent> <Esc> :noh<CR>
