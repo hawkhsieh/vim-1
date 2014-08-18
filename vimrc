@@ -310,9 +310,10 @@ nnoremap td  :tabclose<CR>
 "-------------------------------------------
 
 " After searching highlight, type `,` + `n`(forward) or `N`(backward) can help you jump specific location.
-nnoremap <silent> <leader>N :hlsearch<CR>
-nnoremap <silent> <leader>n :nohlsearch<CR>
-let mapleader = ","
+" 2014/8/18 write off below setting, because easymotion cannot work.
+" nnoremap <silent> <leader>N :hlsearch<CR>
+" nnoremap <silent> <leader>n :nohlsearch<CR>
+" let mapleader = ","
 
 " Map `esc` to clear highlight from searching result.
 " Some problem with f1~f12
