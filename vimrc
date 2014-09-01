@@ -207,9 +207,9 @@ endfunction
 " Execute compass :
 "   1. There has some problem about file permission with using filereadable, use glob instead.
 "   2. Use `silent` to avoid this message "Press ENTER or type command to continue" after saving the file (`:q`).
-:if !empty(glob("$HOME/$BRANDING/bin/compass_lite"))
-:    autocmd BufWritePost *.scss silent !$HOME/$BRANDING/bin/compass_lite <afile> <afile>:r.css
-:endif
+" :if !empty(glob("$HOME/$BRANDING/bin/compass_lite"))
+" :    autocmd BufWritePost *.scss silent !$HOME/$BRANDING/bin/compass_lite <afile> <afile>:r.css
+" :endif
 
 
 " function! FixCSS()
