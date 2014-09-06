@@ -318,3 +318,8 @@ nnoremap td  :tabclose<CR>
 " Map `esc` to clear highlight from searching result.
 " Some problem with f1~f12
 " nnoremap <silent> <Esc> :noh<CR>
+
+" Change tab depend on file type
+autocmd BufRead,BufNewFile *.rb set shiftwidth=2    "indent : let 1 tab to 4 spaces
+autocmd BufRead,BufNewFile *.rb set tabstop=2       "width of Tab, defaout is 8
+autocmd BufRead,BufNewFile *.rb set softtabstop=2   "let 1 tab to 4 spaces
