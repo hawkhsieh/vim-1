@@ -320,6 +320,10 @@ nnoremap td  :tabclose<CR>
 " nnoremap <silent> <Esc> :noh<CR>
 
 " Change tab depend on file type
-autocmd BufRead,BufNewFile *.rb set shiftwidth=2    "indent : let 1 tab to 4 spaces
-autocmd BufRead,BufNewFile *.rb set tabstop=2       "width of Tab, defaout is 8
-autocmd BufRead,BufNewFile *.rb set softtabstop=2   "let 1 tab to 4 spaces
+autocmd Filetype ruby setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd BufRead,BufNewFile *.erb set tabstop=2       "width of Tab, defaout is 8
+autocmd BufRead,BufNewFile *.erb set shiftwidth=2       "width of Tab, defaout is 8
+autocmd BufRead,BufNewFile *.erb set softtabstop=2       "width of Tab, defaout is 8
+autocmd BufRead,BufNewFile *.yml set tabstop=2       "width of Tab, defaout is 8
+autocmd BufRead,BufNewFile *.yml set shiftwidth=2       "width of Tab, defaout is 8
+autocmd BufRead,BufNewFile *.yml set softtabstop=2       "width of Tab, defaout is 8
