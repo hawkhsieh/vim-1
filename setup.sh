@@ -37,8 +37,8 @@ echo "=== Combine snippets === "
 # cat vim/additional-setting/snippets/go.snippets >> vim/bundle/snipmate.vim/snippets/go.snippets
 # cat vim/additional-setting/snippets/javascript.snippets >> vim/bundle/snipmate.vim/snippets/javascript.snippets
 
-mv vim/additional-setting/snippets/php.snippets vim/bundle/snipmate.vim/snippets/php.snippets
-mv vim/additional-setting/snippets/go.snippets vim/bundle/snipmate.vim/snippets/go.snippets
-mv vim/additional-setting/snippets/javascript.snippets vim/bundle/snipmate.vim/snippets/javascript.snippets
+cp vim/additional-setting/snippets/php.snippets vim/bundle/snipmate.vim/snippets/php.snippets
+cp vim/additional-setting/snippets/go.snippets vim/bundle/snipmate.vim/snippets/go.snippets
+cp vim/additional-setting/snippets/javascript.snippets vim/bundle/snipmate.vim/snippets/javascript.snippets
 
 echo "=== Setup done !! ==="

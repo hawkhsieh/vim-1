@@ -43,7 +43,7 @@ snippet pec
 snippet htm
 	<?php echo htmlspecialchars(${1}); ?>${2}
 # -------------------------------
-### log_message
+### ci log
 snippet log
 	log_message('info', ${1});${2}
 snippet log-
@@ -84,3 +84,45 @@ snippet loggg
 	log_message('info', 'gg');
 snippet logbb
 	log_message('info', 'bb');
+
+### laravel log
+snippet L
+	Log::info(${1});${2}
+snippet L-
+	Log::info('-----------------------------');${1}
+snippet Ljson
+	Log::info(json_encode(${1}, JSON_UNESCAPED_UNICODE));${2}
+snippet Lvar
+	Log::info(var_export(${1}, TRUE));${2}
+snippet Lpr
+	Log::info(print_r(${1}));${2}
+snippet Lqq
+	Log::info('qq');
+snippet Laa
+	Log::info('aa');
+snippet Lzz
+	Log::info('zz');
+snippet Lww
+	Log::info('ww');
+snippet Lss
+	Log::info('ss');
+snippet Lxx
+	Log::info('xx');
+snippet Lee
+	Log::info('ee');
+snippet Ldd
+	Log::info('dd');
+snippet Lcc
+	Log::info('cc');
+snippet Lrr
+	Log::info('rr');
+snippet Lff
+	Log::info('ff');
+snippet Lvv
+	Log::info('vv');
+snippet Ltt
+	Log::info('tt');
+snippet Lgg
+	Log::info('gg');
+snippet Lbb
+	Log::info('bb');
