@@ -23,7 +23,7 @@
 
 ## Docs
 
-Install & Update : `:BundleInstall`
+Install & Update : `:PluginInstall`
 
 > see `:h` vundle vimdoc for more details
 
@@ -53,7 +53,9 @@ After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 
 `:Gblame` : Equal to command `git blame xx.go`
 
-## Go dev environment
+## Install go dev environment
+
+> 必須先安裝好 golang
 
 [1] Install
 
@@ -65,13 +67,24 @@ Mac : `brew install mercurial ctags`
 
 [2] 在 vim 裡執行 `:GoInstallBinaries` 或直接執行 `vim +GoInstallBinaries`
 
-[3] 常用快捷
+## Shortcut
+
+### 一般
+
+* `F1` : 打開 nerdtree
+* `F2` : 打開 gundo
+* `F5` : Paste 模式開關 (按一下開, 再按一下關閉)
+* `F6` : 複製 (將行數及換行關閉)
+* `F7` : 畫面向右移動
+* `F8` : 畫面向左移動
+
+### Golang 開發 (參考上面 Go dev 的環境安裝)
 
 * `gd` : 跳到 func 定義的檔案, 但本身檔案會被放到 buffer, 需再執行 `:b1` 才能跳回來
 * `F3` : 打開 tagbar, `?` 顯示指令說明
-* `F4` : 觸發 AutoComplete, 也可直接執行 `<C-x><C-o>`
 * `F9` : 以 split window 打開 func 定義的檔案
 * `F10` : 執行 `:q`, quit
+* `F12` : 觸發 AutoComplete, 也可直接執行 `<C-x><C-o>`
 
 
 ## Plugins:
