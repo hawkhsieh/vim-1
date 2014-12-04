@@ -57,20 +57,21 @@ After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 
 [1] Install
 
-    sudo apt-get install mercurial ctags
+Ubuntu : `sudo apt-get install mercurial ctags`
+Mac : `brew install mercurial ctags`
 
-mercurial : go package 的源檔
-ctag : tagbar 需要
+> * mercurial : go package 的源檔
+> * ctag : tagbar 需要
 
-[2] Exec `:GoInstallBinaries` in vim
+[2] 在 vim 裡執行 `:GoInstallBinaries` 或直接執行 `vim +GoInstallBinaries`
 
 [3] 常用快捷
 
-`gd` : 跳到 func 定義的檔案, 但本身檔案會被放到 buffer, 需再執行 `:b1` 才能跳回來
-`F3` : 打開 tagbar, `?` 顯示指令說明
-`F4` : 觸發 AutoComplete, 也可直接執行 `<C-x><C-o>`
-`F9` : 以 split window 打開 func 定義的檔案
-`F10` : 執行 `:q`, quit
+* `gd` : 跳到 func 定義的檔案, 但本身檔案會被放到 buffer, 需再執行 `:b1` 才能跳回來
+* `F3` : 打開 tagbar, `?` 顯示指令說明
+* `F4` : 觸發 AutoComplete, 也可直接執行 `<C-x><C-o>`
+* `F9` : 以 split window 打開 func 定義的檔案
+* `F10` : 執行 `:q`, quit
 
 
 ## Plugins:
@@ -85,6 +86,6 @@ ctag : tagbar 需要
 * [vim-airline](https://github.com/bling/vim-airline)
 * [tabular](https://github.com/godlygeek/tabular)
 * [fugitive](https://github.com/tpope/vim-fugitive)
-* Markdown syntax highlighting[vim-markdown](https://github.com/plasticboy/vim-markdown.git)
-* Other syntax highlighting[syntastic](https://github.com/scrooloose/syntastic.git)
+* Markdown syntax highlighting - [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
+* Other syntax highlighting - [syntastic](https://github.com/scrooloose/syntastic.git)
 * [vim-go](https://github.com/fatih/vim-go)

@@ -60,7 +60,7 @@ let g:vim_markdown_folding_disabled=1
 " let g:vim_markdown_initial_foldlevel=1
 
 " [vim plugin] vim-go
-" syntax highlighting
+" for syntax highlighting
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -80,6 +80,11 @@ nmap <F3> :TagbarToggle<CR>
 
 " ======= Plugin Setting End ==================================
 
+" download https://github.com/tomasr/molokai/blob/master/colors/molokai.vim into ~/.vim/color/
+colorscheme molokai
+
+" Enable syntax
+syntax enable
 
 " Searching ignorecase
 set ignorecase
@@ -246,11 +251,11 @@ autocmd BufRead,BufNewFile *.yml set tabstop=2       "width of Tab, defaout is 8
 autocmd BufRead,BufNewFile *.yml set shiftwidth=2       "width of Tab, defaout is 8
 autocmd BufRead,BufNewFile *.yml set softtabstop=2       "width of Tab, defaout is 8
 
-" Golang autocomplete
-inoremap <expr> <F4> MayComplete()
-func! MayComplete()
+" Golang autocomplete, F11 can't be used, F11 will be caught by Mac.
+inoremap <expr> <F12> MyComplete()
+function! MyComplete()
   return "\<C-X>\<C-O>"
-endfunc
+endfunction
 
 " XXX Don't delete it XXX
 " exec directly
