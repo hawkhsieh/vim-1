@@ -87,6 +87,4 @@ ctag : tagbar 需要
 * [fugitive](https://github.com/tpope/vim-fugitive)
 * Markdown syntax highlighting[vim-markdown](https://github.com/plasticboy/vim-markdown.git)
 * Other syntax highlighting[syntastic](https://github.com/scrooloose/syntastic.git)
-* Go syntax highlighting[vim-golang](https://github.com/jnwhiteh/vim-golang.git)
-* Jump to another func[dgryski/vim-godef]
-* Gocode (Tip func name that you type in half)[Blackrush/vim-gocode]
+* [vim-go](https://github.com/fatih/vim-go)
