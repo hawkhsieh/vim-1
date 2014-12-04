@@ -13,25 +13,23 @@ filetype off        " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 " required! let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " My Bundles here :
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'sjl/gundo.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'bling/vim-airline'
-Bundle 'godlygeek/tabular'
-Bundle 'tpope/vim-fugitive'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'scrooloose/syntastic'
-Bundle 'jnwhiteh/vim-golang'
-" Bundle 'vim-scripts/taglist.vim'
-Bundle 'dgryski/vim-godef'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'msanders/snipmate.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'sjl/gundo.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'bling/vim-airline'
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-fugitive'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/syntastic'
+Plugin 'fatih/vim-go'
+" tagbar for go variable/func tag
+Plugin 'majutsushi/tagbar'
 
 " [vim plugin] Airline
 set laststatus=2
@@ -61,59 +59,27 @@ let g:vim_markdown_folding_disabled=1
 " > Set Initial Foldlevel  (if enable, it  would be like this '+---  3 lines: bash ~/vim/update.sh------'
 " let g:vim_markdown_initial_foldlevel=1
 
-" [vim plugin] vim-golang : go syntax
-" filetype off
-" filetype plugin indent off
-" set runtimepath+=$GOROOT/misc/vim
-" filetype plugin indent on
-" syntax on
-
-" [vim plugin] taglist
-" nnoremap <silent> <F4> :TlistToggle<CR>
-
-" [vim plugin] godef
-" > 1. will reuse the current window
-" g:godef_split=0
-" > 2. will open the definition in a new tab
-" g:godef_split=2
-" > 3. If you want jumps to the same file to move your current cursor instead of splitting
-" g:godef_same_file_in_same_window=1
+" [vim plugin] vim-go
+" syntax highlighting
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+" go doc
+au FileType go nmap gd <Plug>(go-doc)
+au FileType go nmap gv <Plug>(go-doc-vertical)
+au FileType go nmap gb <Plug>(go-doc-browser)
+" go def
+au FileType go nmap <F9> <Plug>(go-def-split)
+au FileType go nmap dv <Plug>(go-def-vertical)
+au FileType go nmap dt <Plug>(go-def-tab)
+nnoremap <silent> <F10> :q<CR>
 
 " [vim plugin] tagbar
-
 nmap <F3> :TagbarToggle<CR>
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
+
 
 " ======= Plugin Setting End ==================================
 
-" When saving *.go format file
-" autocmd BufWritePre *.go :Fmt
 
 " Searching ignorecase
 set ignorecase
@@ -127,7 +93,7 @@ set softtabstop=4   "let 1 tab to 4 spaces
 set hlsearch        "highlight matched word
 set incsearch       "cursor will shift to the matched word
 " set showmatch       " it can reduce the need for %, the cursor will briefly jump to the matching brace when you insert one.
-set colorcolumn=120 " Warning line for limiting 120 characters count.
+" set colorcolumn=120 " Warning line for limiting 120 characters count.
 set cursorline      " cursor line
 hi CursorLine       ctermbg=236  ctermfg=NONE guibg=#303030 guifg=NONE    cterm=NONE           gui=NONE
 
@@ -150,16 +116,6 @@ set tabpagemax=50    " default tab limit 10 pages
 highlight TabLine ctermbg=blue
 highlight TabLineFill ctermbg=green
 highlight TabLineSel ctermbg=red
-
-" Syntax highlight.
-syntax on
-hi Comment term=standout cterm=bold ctermfg=0
-highlight Search term=reverse ctermbg=3 ctermfg=0
-highlight Normal ctermbg=black ctermfg=white
-highlight Folded ctermbg=black ctermfg=darkcyan
-hi Cursor ctermbg=Gray ctermfg=Blue
-highlight clear SpellBad
-highlight SpellBad term=underline cterm=underline ctermfg=red
 
 " Set status line.
 set ls=2
@@ -276,44 +232,6 @@ nnoremap tt  :tabedit<Space>
 nnoremap tn  :tabnext<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
-" Alternatively use
-"nnoremap th :tabnext<CR>
-"nnoremap tl :tabprev<CR>
-"nnoremap tn :tabnew<CR>
-
-"-------------------------------------------
-" Vim scheme
-" Bundle 'altercation/vim-colors-solarized.git'
-" [vim plugin] vim-colors-solarized.git
-" syntax enable
-" set background=dark
-" colorscheme solarized
-" let g:solarized_termcolors=256
-" call togglebg#map("<F9>")
-"Remove background set by colorscheme
-" hi Normal ctermbg=NONE
-" hi Comment ctermbg=NONE
-" hi Constant ctermbg=NONE
-" hi Special ctermbg=NONE
-" hi Identifier ctermbg=NONE
-" hi Statement ctermbg=NONE
-" hi PreProc ctermbg=NONE
-" hi Type ctermbg=NONE
-" hi Underlined ctermbg=NONE
-" hi Todo ctermbg=NONE
-" hi String ctermbg=NONE
-" hi Function ctermbg=NONE
-" hi Conditional ctermbg=NONE
-" hi Repeat ctermbg=NONE
-" hi Operator ctermbg=NONE
-" hi Structure ctermbg=NONE
-"-------------------------------------------
-
-" After searching highlight, type `,` + `n`(forward) or `N`(backward) can help you jump specific location.
-" 2014/8/18 write off below setting, because easymotion cannot work.
-" nnoremap <silent> <leader>N :hlsearch<CR>
-" nnoremap <silent> <leader>n :nohlsearch<CR>
-" let mapleader = ","
 
 " Map `esc` to clear highlight from searching result.
 " Some problem with f1~f12
@@ -327,3 +245,13 @@ autocmd BufRead,BufNewFile *.erb set softtabstop=2       "width of Tab, defaout 
 autocmd BufRead,BufNewFile *.yml set tabstop=2       "width of Tab, defaout is 8
 autocmd BufRead,BufNewFile *.yml set shiftwidth=2       "width of Tab, defaout is 8
 autocmd BufRead,BufNewFile *.yml set softtabstop=2       "width of Tab, defaout is 8
+
+" Golang autocomplete
+inoremap <expr> <F4> MayComplete()
+func! MayComplete()
+  return "\<C-X>\<C-O>"
+endfunc
+
+" XXX Don't delete it XXX
+" exec directly
+" :exe "normal ds"

@@ -9,7 +9,7 @@
 
 [2] execute `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 
-[3] Launch `vim`, run `:BundleInstall` (or `vim +BundleInstall +qall` for CLI lovers)
+[3] Open `vim`, run `:BundleInstall` (or `vim +BundleInstall +qall` for CLI lovers)
 
 ## Or install automatically
 
@@ -25,82 +25,11 @@
 
 Install & Update : `:BundleInstall`
 
-see `:h` vundle vimdoc for more details
+> see `:h` vundle vimdoc for more details
 
 ## Snippets
 
 You can set your own snippets setting in `.vim/additional-setting/snippets/`, and added into `setup.sh`.
-
-## Additional installation
-
-### taglist
-
-Additional install ctags, [Download ctags source](http://ctags.sourceforge.net/)
-
-    $ tar xvf ctags-5.6.tar.gz
-    $ cd ctags-5.6
-    $ ./configure
-    $ make && sudo make install
-
-vimrc :
-
-   Bundle 'vim-scripts/taglist.vim'
-   nnoremap <silent> <F4> :TlistToggle<CR>
-
-Usage :
-
-    ctags -R     (genrate index file)
-    vim XX.php
-
-Shortcut :
-
-1.  `ctrl` + `]` : Go to the funtion (Can corss directory/file)
-2. `ctrl` + `t` : Go back origin position
-
-### Install mercurial
-
-    sudo apt-get install mercurial
-
-### Godef (For go to jump to another position of func)
-
-    Bundle 'dgryski/vim-godef'
-
-    go get code.google.com/p/rog-go/exp/cmd/godef
-
-shortcut :
-
-`gd` : Jump to func (cross directory/file)
-
-### Gocode (Tip func name that you type in half)
-
-    Bundle 'Blackrush/vim-gocode'
-
-    go get github.com/nsf/gocode
-
-shortcut :
-
-`ctrl` + `x` and `ctrl` + `o` : Tip func name of package
-
-if fail, update gocode :
-
-    cd $GOPATH/src/github.com/nsf/gocode
-    ./vim/update.sh
-
-options :
-
-    gocode set propose-builtins true    (auto tip golang func/type, I think it didn't work)
-    gocode set lib-path "/home/border/gocode/pkg/linux_amd64"       (default: gocode search `$GOPATH/pkg/$GOOS_$GOARCH` and `$GOROOT/pkg/$GOOS_$GOARCH`)
-
-### Tagbar (Show func/variable name of current file)
-
-    Bundle 'majutsushi/tagbar'
-
-    go get -u github.com/jstemmer/gotags
-
-shortcut :
-
-1. `F4` : show func/variable name in new windows
-2. `p` :  go to your target func name but only current file
 
 ## Usage
 
@@ -123,6 +52,26 @@ After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 #### fugitive
 
 `:Gblame` : Equal to command `git blame xx.go`
+
+## Go dev environment
+
+[1] Install
+
+    sudo apt-get install mercurial ctags
+
+mercurial : go package 的源檔
+ctag : tagbar 需要
+
+[2] Exec `:GoInstallBinaries` in vim
+
+[3] 常用快捷
+
+`gd` : 跳到 func 定義的檔案, 但本身檔案會被放到 buffer, 需再執行 `:b1` 才能跳回來
+`F3` : 打開 tagbar, `?` 顯示指令說明
+`F4` : 觸發 AutoComplete, 也可直接執行 `<C-x><C-o>`
+`F9` : 以 split window 打開 func 定義的檔案
+`F10` : 執行 `:q`, quit
+
 
 ## Plugins:
 
