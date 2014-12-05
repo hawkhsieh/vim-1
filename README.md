@@ -86,6 +86,12 @@ Mac : `brew install mercurial ctags`
 * `F10` : 執行 `:q`, quit
 * `F12` : 觸發 AutoComplete, 也可直接執行 `<C-x><C-o>`
 
+## Trouble shooting
+
+Q: color scheme not working ?
+
+A: 執行 `python vim/terminalcolors.py`, 如果色碼表沒有出來, 請將 `export TERM="xterm-256color"` 加到你的 .bashrc / .bash_profile 裡, 再執行一次應該就會有色碼表了, 而 color scheme 應該也會是正常顯示了
+
 
 ## Plugins:
 
