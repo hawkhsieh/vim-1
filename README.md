@@ -65,7 +65,7 @@ Mac : `brew install mercurial ctags`
 > * mercurial : go package 的源檔
 > * ctag : tagbar 需要
 
-[2] 在 vim 裡執行 `:GoInstallBinaries` 或直接執行 `vim +GoInstallBinaries`
+[2] 在 vim 裡執行 `:GoInstallBinaries` 或直接執行 `vim +GoInstallBinaries +qall`
 
 ## Shortcut
 
