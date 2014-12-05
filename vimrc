@@ -73,6 +73,8 @@ au FileType go nmap <F9> <Plug>(go-def-split)
 au FileType go nmap dv <Plug>(go-def-vertical)
 au FileType go nmap dt <Plug>(go-def-tab)
 nnoremap <silent> <F10> :q<CR>
+" go shortcut
+au Filetype go nnoremap <leader>r :GoRun %<CR>
 
 " [vim plugin] tagbar
 nmap <F3> :TagbarToggle<CR>
@@ -258,5 +260,8 @@ function! MyComplete()
 endfunction
 
 " XXX Don't delete it XXX
-" exec directly
+" 直接執行快捷鍵 (寫在 .bashrc)
 " :exe "normal ds"
+" 直接 go run 目前的檔案 (直接在 vim 執行)
+" !go run %
+
