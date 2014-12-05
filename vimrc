@@ -80,7 +80,7 @@ nmap <F3> :TagbarToggle<CR>
 
 " ======= Plugin Setting End ==================================
 
-" download https://github.com/tomasr/molokai/blob/master/colors/molokai.vim into ~/.vim/colors/
+" download https://github.com/tomasr/molokai/blob/master/colors/molokai.vim on ~/.vim/colors/
 colorscheme molokai
 
 " Enable syntax
