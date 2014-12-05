@@ -9,7 +9,7 @@
 
 [2] execute `git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle`
 
-[3] Open `vim`, run `:BundleInstall` (or `vim +BundleInstall +qall` for CLI lovers)
+[3] Open `vim`, run `:PluginInstall` (or `vim +PluginInstall +qall` for CLI lovers)
 
 ## Or install automatically
 
