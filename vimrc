@@ -1,7 +1,7 @@
 " Jex Lin's vim setting
 " =====================
 " create time : 20130818 20:30
-" last modified time : 20131225 10:02
+" last modified time : 20141205 18:05
 " =====================================
 " help :
 " `:help key-notation`
@@ -264,4 +264,5 @@ endfunction
 " :exe "normal ds"
 " 直接 go run 目前的檔案 (直接在 vim 執行)
 " !go run %
-
+" 執行指令並開新的 window (直接在 vim 執行)
+" nmap <silent> <F4> :GoBuild<CR>:copen<CR>
