@@ -15,11 +15,11 @@
 
     cd ~
     git clone https://github.com/jex-lin/vim.git
-    bash ~/vim/setup.sh
+    ~/vim/setup.sh
 
 ## Update
 
-    bash ~/vim/update.sh
+    ~/vim/update.sh
 
 ## Docs
 
