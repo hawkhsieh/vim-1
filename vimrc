@@ -64,17 +64,19 @@ let g:vim_markdown_folding_disabled=1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
-" go doc
+" godoc
 au FileType go nmap gd <Plug>(go-doc)
 au FileType go nmap gv <Plug>(go-doc-vertical)
 au FileType go nmap gb <Plug>(go-doc-browser)
-" go def
+" godef
 au FileType go nmap <F9> <Plug>(go-def-split)
 au FileType go nmap dv <Plug>(go-def-vertical)
 au FileType go nmap dt <Plug>(go-def-tab)
 nnoremap <silent> <F10> :q<CR>
 " go shortcut
 au Filetype go nnoremap <leader>r :GoRun %<CR>
+" goimports
+let g:go_fmt_command = "goimports"
 
 " [vim plugin] tagbar
 nmap <F3> :TagbarToggle<CR>
