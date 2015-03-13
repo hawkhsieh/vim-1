@@ -69,9 +69,10 @@ au FileType go nmap gd <Plug>(go-doc)
 au FileType go nmap gv <Plug>(go-doc-vertical)
 au FileType go nmap gb <Plug>(go-doc-browser)
 " godef
-au FileType go nmap <F9> <Plug>(go-def-split)
-au FileType go nmap dv <Plug>(go-def-vertical)
-au FileType go nmap dt <Plug>(go-def-tab)
+au FileType go nmap <F9> <Plug>(go-def-tab)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 nnoremap <silent> <F10> :q<CR>
 " go shortcut
 au Filetype go nnoremap <leader>r :GoRun %<CR>
