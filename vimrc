@@ -8,14 +8,17 @@
 " =====================================
 
 " [vim plugin] vundle
-set nocompatible    " be iMproved
-filetype off        " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" required! let Vundle manage Vundle
-Plugin 'gmarik/vundle'
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" My Bundles here :
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'msanders/snipmate.vim'
@@ -30,12 +33,17 @@ Plugin 'scrooloose/syntastic'
 Plugin 'fatih/vim-go'
 " tagbar for go variable/func tag
 Plugin 'majutsushi/tagbar'
+Plugin 'github.com/tpope/vim-rails'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
 
 " [vim plugin] Airline
 set laststatus=2
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline_fugitive_prefix = ' '
 
 " [vim plugin] NERDTree
 nnoremap <silent> <F1> :NERDTree<CR>
