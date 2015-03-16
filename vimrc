@@ -281,5 +281,18 @@ endfunction
 
 
 " 將 syntax highlighting 關掉, 不然很長一串的 string 在一行會讓 vim 變得很慢
-nnoremap <leader>so :syntax on<cr>
-nnoremap <leader>sf :syntax off<cr>
+"nnoremap <silent> :syntax on<cr>
+"nnoremap <silent> :syntax off<cr>
+nnoremap <silent> <F4> :call SyntaxToggle()<cr>
+let g:SyntaxFlag=0
+function! SyntaxToggle()
+ if g:SyntaxFlag == 1
+   syntax on
+   let g:SyntaxFlag=0
+ else
+   syntax off
+   let g:SyntaxFlag=1
+ endif
+endfunction
+
+
