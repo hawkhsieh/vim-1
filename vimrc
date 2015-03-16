@@ -277,3 +277,9 @@ endfunction
 " !go run %
 " 執行指令並開新的 window (直接在 vim 執行)
 " nmap <silent> <F4> :GoBuild<CR>:copen<CR>
+
+
+
+" 將 syntax highlighting 關掉, 不然很長一串的 string 在一行會讓 vim 變得很慢
+nnoremap <leader>so :syntax on<cr>
+nnoremap <leader>sf :syntax off<cr>
