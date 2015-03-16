@@ -78,9 +78,10 @@ au FileType go nmap gd <Plug>(go-doc)
 au FileType go nmap gv <Plug>(go-doc-vertical)
 au FileType go nmap gb <Plug>(go-doc-browser)
 " godef
-au FileType go nmap <F9> <Plug>(go-def-split)
-au FileType go nmap dv <Plug>(go-def-vertical)
-au FileType go nmap dt <Plug>(go-def-tab)
+au FileType go nmap <F9> <Plug>(go-def-tab)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 nnoremap <silent> <F10> :q<CR>
 " go shortcut
 au Filetype go nnoremap <leader>r :GoRun %<CR>
@@ -277,3 +278,22 @@ endfunction
 " !go run %
 " 執行指令並開新的 window (直接在 vim 執行)
 " nmap <silent> <F4> :GoBuild<CR>:copen<CR>
+
+
+
+" 將 syntax highlighting 關掉, 不然很長一串的 string 在一行會讓 vim 變得很慢
+"nnoremap <silent> :syntax on<cr>
+"nnoremap <silent> :syntax off<cr>
+nnoremap <silent> <F4> :call SyntaxToggle()<cr>
+let g:SyntaxFlag=0
+function! SyntaxToggle()
+ if g:SyntaxFlag == 1
+   syntax on
+   let g:SyntaxFlag=0
+ else
+   syntax off
+   let g:SyntaxFlag=1
+ endif
+endfunction
+
+
