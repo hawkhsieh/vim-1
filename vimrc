@@ -37,6 +37,7 @@ Plugin 'majutsushi/tagbar'
 " Plugin 'github.com/ngmy/vim-rubocop'    " Rails coding style
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'tmhedberg/matchit'
+Plugin 'pangloss/vim-javascript'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
