@@ -108,3 +108,4 @@ A: 執行 `python vim/terminalcolors.py`, 如果色碼表沒有出來, 請將 `e
 * Markdown syntax highlighting - [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
 * Other syntax highlighting - [syntastic](https://github.com/scrooloose/syntastic.git)
 * [vim-go](https://github.com/fatih/vim-go)
+* [match html closing tag](https://github.com/tmhedberg/matchit)
