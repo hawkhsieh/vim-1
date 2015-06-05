@@ -38,6 +38,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'tmhedberg/matchit'
 Plugin 'pangloss/vim-javascript'
+Plugin 'wesQ3/vim-windowswap'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +64,7 @@ filetype plugin on
 
 " [vim plugin] syntastic
 " > Just check php syntax error, don't check coding style
+" 預設是判斷 <?php, 打開 cli/php.ini 的 short_open_tag = On, <? 才能生效
 let g:syntastic_php_checkers=['php']
 
 " [vim plugin] vim-markdown : Markdown syntax

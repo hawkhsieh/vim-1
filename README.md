@@ -1,4 +1,4 @@
-## Install manually :
+# Install manually :
 
 [1] Follow below steps :
 
@@ -11,49 +11,49 @@
 
 [3] Open `vim`, run `:PluginInstall` (or `vim +PluginInstall +qall` for CLI lovers)
 
-## Or install automatically
+# Or install automatically
 
     cd ~
     git clone https://github.com/jex-lin/vim.git
     ~/vim/setup.sh
 
-## Update
+# Update
 
     ~/vim/update.sh
 
-## Docs
+# Docs
 
 Install & Update : `:PluginInstall`
 
 > see `:h` vundle vimdoc for more details
 
-## Snippets
+# Snippets
 
 You can set your own snippets setting in `.vim/additional-setting/snippets/`, and added into `setup.sh`.
 
-## Usage
+# Usage
 
-#### tabular
+### tabular
 
 After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 
-#### vim-easymotion
+### vim-easymotion
 
 1. `\w` or `\W` : Looking forward
 2. `\b` or `\B` : Looking backward
 
-#### ctrlp
+### ctrlp
 
 1. `ctrl` + `p` : start choosing
 2. `ctrl` + `t` : new tab
 3. `ctrl` + `v` : vertical
 4. `ctrl` + `o` : show options
 
-#### fugitive
+### fugitive
 
 `:Gblame` : Equal to command `git blame xx.go`
 
-## Install go dev environment
+# Install go dev environment
 
 > 必須先安裝好 golang
 
@@ -67,7 +67,11 @@ Mac : `brew install mercurial ctags`
 
 [2] 在 vim 裡執行 `:GoInstallBinaries` 或直接執行 `vim +GoInstallBinaries +qall`
 
-## Shortcut
+### vim-windowswap 交換 windows 視窗
+
+先在 window1 按 `\` + `ww`, 再到要對換的 window2 按 `\` + `ww`, 就可以交換了
+
+# Shortcut
 
 ### 一般
 
@@ -86,14 +90,14 @@ Mac : `brew install mercurial ctags`
 * `F10` : 執行 `:q`, quit
 * `F12` : 觸發 AutoComplete, 也可直接執行 `<C-x><C-o>`
 
-## Trouble shooting
+# Trouble shooting
 
 Q: color scheme not working ?
 
 A: 執行 `python vim/terminalcolors.py`, 如果色碼表沒有出來, 請將 `export TERM="xterm-256color"` 加到你的 .bashrc / .bash_profile 裡, 再執行一次應該就會有色碼表了, 而 color scheme 應該也會是正常顯示了
 
 
-## Plugins:
+# Plugins:
 
 * [vundle](https://github.com/gmarik/vundle)
 * [nerdtree](https://github.com/scrooloose/nerdtree)
@@ -109,3 +113,4 @@ A: 執行 `python vim/terminalcolors.py`, 如果色碼表沒有出來, 請將 `e
 * Other syntax highlighting - [syntastic](https://github.com/scrooloose/syntastic.git)
 * [vim-go](https://github.com/fatih/vim-go)
 * [match html closing tag](https://github.com/tmhedberg/matchit)
+* [Swap split windows](https://github.com/wesQ3/vim-windowswap);
