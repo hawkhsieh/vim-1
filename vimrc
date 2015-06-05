@@ -65,6 +65,7 @@ filetype plugin on
 " [vim plugin] syntastic
 " > Just check php syntax error, don't check coding style
 " 預設是判斷 <?php, 打開 cli/php.ini 的 short_open_tag = On, <? 才能生效
+" 用 npm 安裝 jshint
 let g:syntastic_php_checkers=['php']
 let g:syntastic_javascript_checkers = ['jshint']
 

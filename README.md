@@ -53,7 +53,13 @@ After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 
 `:Gblame` : Equal to command `git blame xx.go`
 
-# syntastic - jshint
+# syntastic
+
+#### php
+
+預設是判斷 `<?php`, 打開 `cli/php.ini` 的 `short_open_tag = On`, `<?` 才能生效
+
+#### jshint
 
     sudo apt-get install npm nodejs nodejs-legacy
     npm install jshint -g
