@@ -53,6 +53,11 @@ After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 
 `:Gblame` : Equal to command `git blame xx.go`
 
+# syntastic - jshint
+
+    sudo apt-get install npm nodejs nodejs-legacy
+    npm install jshint -g
+
 # Install go dev environment
 
 > 必須先安裝好 golang
