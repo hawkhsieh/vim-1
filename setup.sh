@@ -28,8 +28,9 @@ ln -s vim/vimrc .vimrc
 
 # Download vundle and other plugins
 echo "=== Download vundle and other plugins ==="
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+rm -rf $HOME/vim/bundle/vundle
+git clone https://github.com/gmarik/vundle.git $HOME/vim/bundle/vundle
+vim +BundleInstall +qall
 
 # Combine snippets
 echo "=== Combine snippets === "
