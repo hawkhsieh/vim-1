@@ -53,6 +53,25 @@ After selecting in visual mode, type `:Tab/=` can align `=` in each line.
 
 `:Gblame` : Equal to command `git blame xx.go`
 
+### rails-vim
+
+* `gf` : 可跳到該檔案
+* `:R` : 到 related 檔案, 例如在 controller 就會跳到 view
+* `:A` : alternate , 例如在 controller 就會跳到 test
+* `:RS` : 同上, split windows
+* `:RV` : 同上, vertical split windows
+* `:RT` : 同上, 新 tab
+* `:rails-alternate` : 相關文件 help
+* `Econtroller comments` : 打開 comments_controller.rb
+* `Scontroller comments` : 打開 comments_controller.rb, 水平分割
+* `Vcontroller comments` : 打開 comments_controller.rb, 垂直分割
+* `Tcontroller comments` : 打開 comments_controller.rb, tab
+* `Dcontroller comments` : 打開 comments_controller.rb, 讀進 buffer
+* `Eview new` : 在 posts_controller 就會打開 `views/posts/new.html.erb`
+* `Elayout`
+* `initializer`
+* `Eenvironment development` : 開啟 `config/environments/development.rb`
+
 # syntastic
 
 #### php
@@ -111,17 +130,40 @@ A: 執行 `python vim/terminalcolors.py`, 如果色碼表沒有出來, 請將 `e
 # Plugins:
 
 * [vundle](https://github.com/gmarik/vundle)
+> 套件管理工具
 * [nerdtree](https://github.com/scrooloose/nerdtree)
+> 檔案樹
 * [ctrlp.vim](https://github.com/kien/ctrlp.vim)
+> 快速搜尋檔案及闕啟
 * [snipmate.vim](https://github.com/msanders/snipmate.vim)
+> 設定一些快捷鍵可以自動完成
 * [vim-surround](https://github.com/tpope/vim-surround)
+> 取代 `'`, `"` etc.. 括起來的內容
 * [gundo.vim](https://github.com/sjl/gundo.vim)
+> undo history
 * [vim-easymotion](https://github.com/Lokaltog/vim-easymotion)
+> 快速移動到畫面上的任何地方
 * [vim-airline](https://github.com/bling/vim-airline)
+> 讓狀態列更華麗
 * [tabular](https://github.com/godlygeek/tabular)
+> 對齊多行的 `=` 或其他符號
 * [fugitive](https://github.com/tpope/vim-fugitive)
-* Markdown syntax highlighting - [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
-* Other syntax highlighting - [syntastic](https://github.com/scrooloose/syntastic.git)
+> 在 vim 裡使用 git 指令
+* [vim-markdown](https://github.com/plasticboy/vim-markdown.git)
+> 讓 vim 支援 markdown syntax highlighting
+* [syntastic](https://github.com/scrooloose/syntastic.git)
+> 支援各語言的語法檢查
 * [vim-go](https://github.com/fatih/vim-go)
+> 開發 go 的基本 vim, 包含了 godef, godoc etc..
+*[better-indent-support-for-php-with-html](https://github.com/captbaritone/better-indent-support-for-php-with-html)
+> 在 php 檔案編輯 HTML 可以更方便
 * [match html closing tag](https://github.com/tmhedberg/matchit)
+> 可以 match 到 HTML 的閉合標籤
+* [vim-javascript](https://github.com/pangloss/vim-javascript)
+> javascript syntax and indent
 * [Swap split windows](https://github.com/wesQ3/vim-windowswap);
+> 讓兩個分割視窗對調位置
+* [vim-rails](https://github.com/tpope/vim-rails)
+> 開發 rails 的基本 vim
+* [vim-rubocop](https://github.com/ngmy/vim-rubocop)
+> 檢查 code style

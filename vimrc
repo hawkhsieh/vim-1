@@ -33,8 +33,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'fatih/vim-go'
 " tagbar for go variable/func tag
 Plugin 'majutsushi/tagbar'
-" Plugin 'github.com/tpope/vim-rails'
-" Plugin 'github.com/ngmy/vim-rubocop'    " Rails coding style
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'tmhedberg/matchit'
 Plugin 'pangloss/vim-javascript'
@@ -304,4 +302,6 @@ function! SyntaxToggle()
  endif
 endfunction
 
-
+" :tab  再按 ctrl + d 再按 tab 會自動補齊指令
+set wildmenu
+set wildmode=longest:full,full
