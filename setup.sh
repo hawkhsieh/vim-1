@@ -28,8 +28,8 @@ ln -s vim/vimrc .vimrc
 
 # Download vundle and other plugins
 echo "=== Download vundle and other plugins ==="
-git clone https://github.com/gmarik/vundle.git $HOME/vim/bundle/vundle
-vim +BundleInstall +qall
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 # Combine snippets
 echo "=== Combine snippets === "
@@ -38,7 +38,7 @@ cp vim/additional-setting/snippets/go.snippets vim/bundle/snipmate.vim/snippets/
 cp vim/additional-setting/snippets/javascript.snippets vim/bundle/snipmate.vim/snippets/javascript.snippets
 
 #echo "=== Install YCM==="
-#cd ~/.vim/bundle/YouCompleteMe
-#./install.sh
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh
 
 echo "=== Setup done !! ==="

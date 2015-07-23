@@ -14,7 +14,7 @@ RUN curl -sSL https://golang.org/dl/go$GOLANG_VERSION.src.tar.gz \
 
 RUN cd /usr/src/go/src && ./make.bash --no-clean 2>&1
 ENV PATH /usr/src/go/bin:$PATH
-ENV GOPATH /root/go
+ENV GOPATH /root/workspace
 ENV GOROOT /usr/src/go                                                            
 ENV PATH /root/go/bin:$PATH
 
@@ -38,7 +38,7 @@ WORKDIR /root
 RUN mkdir -p /root/vim
 ADD . /root/vim/
 RUN mkdir cd /root/go;mkdir src pkg bin
-RUN bash /root/vim/setup.sh
-RUN vim +GoInstallBinaries +qall
+#RUN bash /root/vim/setup.sh
+#RUN vim +GoInstallBinaries +qall
 # # Define default command.                                                           
 # CMD ["bash"]                                                                        

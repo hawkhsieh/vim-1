@@ -8,14 +8,17 @@
 " =====================================
 
 " [vim plugin] vundle
-set nocompatible    " be iMproved
-filetype off        " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" required! let Vundle manage Vundle
-Plugin 'gmarik/vundle'
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" My Bundles here :
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'msanders/snipmate.vim'
@@ -30,12 +33,23 @@ Plugin 'scrooloose/syntastic'
 Plugin 'fatih/vim-go'
 " tagbar for go variable/func tag
 Plugin 'majutsushi/tagbar'
+" Plugin 'github.com/tpope/vim-rails'
+" Plugin 'github.com/ngmy/vim-rubocop'    " Rails coding style
+Plugin 'captbaritone/better-indent-support-for-php-with-html'
+Plugin 'tmhedberg/matchit'
+Plugin 'pangloss/vim-javascript'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'Valloric/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
 
 " [vim plugin] Airline
 set laststatus=2
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline_fugitive_prefix = ' '
 
 " [vim plugin] NERDTree
 nnoremap <silent> <F1> :NERDTree<CR>
@@ -51,7 +65,10 @@ filetype plugin on
 
 " [vim plugin] syntastic
 " > Just check php syntax error, don't check coding style
+" 預設是判斷 <?php, 打開 cli/php.ini 的 short_open_tag = On, <? 才能生效
+" 用 npm 安裝 jshint
 let g:syntastic_php_checkers=['php']
+let g:syntastic_javascript_checkers = ['jshint']
 
 " [vim plugin] vim-markdown : Markdown syntax
 " > Disable Folding (This function could show whole file content)
@@ -69,9 +86,10 @@ au FileType go nmap gd <Plug>(go-doc)
 au FileType go nmap gv <Plug>(go-doc-vertical)
 au FileType go nmap gb <Plug>(go-doc-browser)
 " godef
-au FileType go nmap <F9> <Plug>(go-def-split)
-au FileType go nmap dv <Plug>(go-def-vertical)
-au FileType go nmap dt <Plug>(go-def-tab)
+au FileType go nmap <F9> <Plug>(go-def-tab)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 nnoremap <silent> <F10> :q<CR>
 " go shortcut
 au Filetype go nnoremap <leader>r :GoRun %<CR>
@@ -268,3 +286,22 @@ endfunction
 " !go run %
 " 執行指令並開新的 window (直接在 vim 執行)
 " nmap <silent> <F4> :GoBuild<CR>:copen<CR>
+
+
+
+" 將 syntax highlighting 關掉, 不然很長一串的 string 在一行會讓 vim 變得很慢
+"nnoremap <silent> :syntax on<cr>
+"nnoremap <silent> :syntax off<cr>
+nnoremap <silent> <F4> :call SyntaxToggle()<cr>
+let g:SyntaxFlag=0
+function! SyntaxToggle()
+ if g:SyntaxFlag == 1
+   syntax on
+   let g:SyntaxFlag=0
+ else
+   syntax off
+   let g:SyntaxFlag=1
+ endif
+endfunction
+
+
